@@ -1,0 +1,103 @@
+.example-container {
+    // height: 100vh;
+    mat-sidenav {
+        width: 400px;
+
+        height: 100vh;
+        max-width: 400px;
+        background: #f15a24;
+        color: #fff;
+        mat-icon {
+            color: #fff;
+        }
+    }
+}
+@media only screen and (max-width: 1439px) {
+    .example-container {
+        mat-sidenav {
+            width: auto;
+        }
+    }
+}
+.example-sidenav-content {
+    padding-top: 64px;
+}
+.content { 
+    background: #fff;
+}
+.sidenav-container {
+    display: flex;
+}
+.back-icon-container {
+    margin-bottom: 16px;
+}
+
+/* Style the tab */
+.tab {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+  }
+
+.tablinks {
+    // margin-top: 16px;
+    
+}
+  
+
+  /* Create an active/current "tab button" class */
+.tab button.active {
+      
+    background-color: #fff;
+
+    &.mat-icon-button {
+        border-radius: 10px 0px 0px 10px ;
+    }
+    mat-icon {
+        color: #707070;
+    }
+    // svg#notch_curve_ex_left {
+    //     path.notch_curve_card_ex {
+    //         fill: white;
+    //     }
+    // }
+}
+// .tab :active {
+//     svg#notch_curve_ex_left {
+//         path.notch_curve_card_ex {
+//             fill: white;
+//         }
+//     }
+// }
+svg#notch_curve_ex_left {
+    background: transparent;
+    position: relative;
+    left: 32px;
+    top: 54px;
+    height: 10px;
+    width: 8px;
+    fill: #f15a24;
+    // transform: scaleY(1.5);
+  }
+  svg#notch_curve_ex_right {
+    background: transparent;
+    // position: absolute;
+    right: -10px;
+    top: 0px;
+    height: 10px;
+    width: 12px;
+    fill: white;
+  }
+  
+  
+/* Style the tab content */
+.tabcontent {
+float: left;
+// padding: 0px 12px;
+// border: 1px solid #ccc;
+width: 360px;
+border-left: none;
+height: 100vh;
+background: white;
+color: #232323;
+}

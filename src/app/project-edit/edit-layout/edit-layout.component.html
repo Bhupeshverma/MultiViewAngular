@@ -1,0 +1,42 @@
+<!-- <mat-sidenav-container class="example-container">
+    <mat-sidenav-content>Main content</mat-sidenav-content>
+    <mat-sidenav mode="side" opened position="end">
+
+    </mat-sidenav>
+  </mat-sidenav-container> -->
+  <mat-sidenav-container class="example-container mat-typography"  (window:resize)="onResize($event)">
+    <mat-sidenav #sidenav mode="side" disableClose="true" opened="true" position="end" [fixedInViewport]="viewport" [fixedTopGap]="topGap"
+    [fixedBottomGap]="bottomGap">
+      <div class="sidenav-container">
+            <div class="tab">
+                    <div *ngFor="let tabs of tabContent">
+                        <svg id="notch_curve_ex_left" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12"><defs><style>
+                                .tab button.active {
+                                    fill: #fff !important;
+                                }
+                        </style></defs><path class="notch_curve_card_ex" d="M0,0A12,12,0,0,1,12,12h2V0Z"/></svg>
+                        <button  mat-icon-button class="tablinks" (click)="openCity($event, tabs.id)" id="{{tabs.id}}" #defaultOpen> <mat-icon >{{tabs.name}}</mat-icon></button>
+                    </div>
+                    
+                    <button  mat-icon-button class="tablinks"  (click)="isExpanded = !isExpanded"> <mat-icon >arrow_forward</mat-icon></button>
+            </div>
+            <div *ngFor="let tabs of tabContent" >
+            <div id="{{tabs.id}}" #tabcontent class="tabcontent"  >
+                    <h3>London {{tabs.id}}</h3>
+                    <p>London is the capital city of England.</p>
+            </div>
+            </div>
+      </div>
+      
+    </mat-sidenav>
+  
+    <div class="example-sidenav-content">
+      You cards and screen Contents goes here..
+      Will be pushed towards left on expanding side navbar.
+      <p style="height: 1200px;">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis magni suscipit debitis eius voluptatem iste architecto quibusdam obcaecati velit ex, neque praesentium. Sapiente maxime quis eum consequatur? Aliquam, similique quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consequuntur explicabo aut quis praesentium earum iste. Illum et ipsa minima eum magni cum, praesentium sequi aut blanditiis doloremque in rerum!
+          <!-- <svg id="notch_curve_ex_left" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12"><defs><style>.notch_curve_card_ex{fill:#f15a24;}</style></defs><path class="notch_curve_card_ex" d="M0,0A12,12,0,0,1,12,12h2V0Z"/></svg> -->
+          <!-- <svg id="notch_curve_ex_right" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 12"><defs><style>.notch_curve_card_ex{fill:#f15a24;}</style></defs><path class="notch_curve_card_ex" d="M14,0A12,12,0,0,0,2,12H0V0Z"/></svg> -->
+      </p>
+    </div>
+  </mat-sidenav-container>
